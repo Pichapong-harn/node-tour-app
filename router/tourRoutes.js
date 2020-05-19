@@ -5,11 +5,6 @@ const router = express.Router();
 
 router.param('id', tourController.checkID)
 
-// create checkbody middleware
-// check if body contains the name and price propoty
-// if not, send back 400 (bad request)
-// add it to post handler stack
-
 router
   .route('/')
   .get(tourController.getAllTours)

@@ -16,6 +16,7 @@ exports.checkID = (req, res, next, val) => {
 };
 
 exports.checkBody = (req, res, next) => {
+  console.log("This is checkbody.")
   if(!req.body.name || !req.body.price){
     return res.status(400).json({
       status: 'fail',
